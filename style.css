@@ -1,0 +1,501 @@
+/* Estilos Globales y Reseteo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Para el scroll suave al hacer clic en los enlaces del nav */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Estilos de Botones (Basados en tu ejemplo) */
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #4CAF50; /* Color verde principal */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+.btn-secondary {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+  background-color: #e9e9e9;
+}
+
+.btn-large {
+  font-size: 1.2em;
+  padding: 12px 24px;
+}
+
+/* Cabecera (Header) */
+header {
+  background-color: #4CAF50; /* Color verde de tu ejemplo */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 160px; /* Ajusta según tu logo */
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid white;
+}
+
+.auth-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Sección Hero (Inicio) */
+.hero-section {
+  background-color: white;
+  padding: 60px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1; /* Ocupa la mitad del espacio */
+}
+
+.hero-text h1 {
+  font-size: 3.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero-image-placeholder {
+  flex: 1; /* Ocupa la otra mitad */
+  text-align: center;
+}
+
+.hero-image-placeholder img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* Color de fondo para el placeholder */
+}
+
+/* Sección Quiénes Somos */
+#quienes-somos {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text .section-title {
+  text-align: left; /* Título alineado a la izquierda para esta sección */
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-image-placeholder {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image-placeholder img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+}
+
+/* Sección Testimonios */
+#testimonios {
+  padding: 60px 0;
+  background-color: #f8f8f8; /* Fondo gris claro de tu ejemplo */
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Para que se ajusten en móviles */
+}
+
+.testimonial-card {
+  background-color: white; /* Estilo de tarjeta de tu ejemplo */
+  padding: 30px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 30%;
+  min-width: 280px;
+  text-align: center;
+}
+
+.testimonial-img-placeholder {
+  margin-bottom: 20px;
+}
+
+.testimonial-img-placeholder img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* Círculo para la foto de perfil */
+  object-fit: cover;
+  background-color: #e0e0e0; /* Color de fondo para la imagen */
+  border: 3px solid #4CAF50;
+}
+
+.quote {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-detail {
+  font-size: 0.9em;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+
+/* Pie de página (Footer) */
+footer {
+  background-color: #333; /* Color de footer de tu ejemplo */
+  color: white;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-nav a {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries para Responsividad simple */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .hero-container, .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text .section-title {
+    text-align: center;
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 80%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.feature-icon-placeholder i {
+  font-size: 30px; /* Ajusta este tamaño como quieras */
+}
+
+.about-mission-vision {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.mission-vision-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mission-card, .vision-card {
+  flex-basis: 45%; /* Cada uno ocupa aprox la mitad */
+  min-width: 300px;
+  padding: 30px;
+  /* --- CAMBIOS AQUÍ --- */
+  text-align: center; /* Centra todo el texto */
+  border-top: 5px solid #4CAF50; /* Cambiamos el borde a la parte superior */
+  /* --- FIN CAMBIOS --- */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.mission-card h3, .vision-card h3 {
+  /* --- CAMBIOS AQUÍ --- */
+  font-size: 2em;     /* Letra más grande para el título */
+  font-weight: 600;
+  /* --- FIN CAMBIOS --- */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.mission-card p, .vision-card p {
+  /* --- CAMBIOS AQUÍ --- */
+  font-size: 1.15em;  /* Letra ligeramente más grande para el párrafo */
+  /* --- FIN CAMBIOS --- */
+  color: #555;
+  line-height: 1.7;
+}
+
+.about-values {
+  padding: 60px 0;
+  background-color: #f8f8f8; /* Fondo gris claro */
+}
+
+.values-container {
+  /* --- CAMBIOS AQUÍ --- */
+  display: grid; /* Usamos Grid en lugar de Flex */
+  grid-template-columns: repeat(3, 1fr); /* Esto crea 3 columnas de igual ancho */
+  gap: 30px; /* Mantiene el espaciado */
+  /* 'flex-wrap' y 'justify-content' ya no son necesarios */
+}
+
+.value-card {
+  background-color: #ffffff;
+  padding: 30px;
+  /* --- CAMBIOS AQUÍ --- */
+  /* width: 30%; */ /* Ya no es necesario, el Grid lo maneja */
+  /* min-width: 280px; */ /* Ya no es necesario */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #4CAF50;
+}
+
+.value-card h4 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333; 
+}
+
+.value-card p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* --- CSS ADICIONAL para Responsividad de Grid --- */
+/* En pantallas pequeñas, volvemos a 1 columna (3 filas) para que no se vea apretado */
+@media (max-width: 768px) {
+  .values-container {
+    grid-template-columns: 1fr; /* 1 sola columna en móviles */
+  }
+}
+
+.cta-section {
+  padding: 60px 0;
+  /* Fondo oscuro como el footer */
+  color: black;
+  /* La propiedad 'text-align' se hereda a todos los hijos */
+  text-align: center; 
+}
+
+/* El .container ya tiene 'margin: 0 auto' que lo centra */
+.cta-section .container {
+  /* Pero nos aseguramos de que el texto dentro también esté centrado */
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.feature-section {
+  padding: 60px 0;
+  background-color: #f8f8f8; /* Fondo gris claro */
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Para móviles */
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 30%;
+  min-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  
+  /* --- CAMBIOS AQUÍ --- */
+  display: flex;         /* 1. Usamos Flexbox para alinear horizontalmente */
+  align-items: center;   /* 2. Esto centra verticalmente el icono con el bloque de texto */
+  gap: 20px;             /* 3. Espacio entre el icono y el texto */
+  /* 'text-align: center;' se ha quitado de aquí */
+}
+
+.feature-icon-placeholder {
+  width: 70px;
+  height: 70px;
+  line-height: 70px; 
+  border-radius: 50%; 
+  background-color: #4CAF50; 
+  color: white;
+  text-align: center; /* Centra el icono < i > dentro del círculo */
+  
+  /* --- CAMBIOS AQUÍ --- */
+  flex-shrink: 0; /* Evita que el círculo verde se encoja */
+  /* 'margin: 0 auto 20px auto;' se ha quitado */
+}
+
+/* --- NUEVO BLOQUE DE CÓDIGO --- */
+/* Este es el contenedor para el H3 y el P */
+.feature-text-content {
+   text-align: left; /* Alinea el texto a la izquierda, para que se lea natural */
+}
+/* --- FIN NUEVO BLOQUE --- */
+
+.feature-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Estilo para el ícono de Font Awesome (asegura centrado vertical) */
+.feature-icon-placeholder i {
+  font-size: 30px; 
+  line-height: 70px; /* Coincide con la altura del círculo */
+}
